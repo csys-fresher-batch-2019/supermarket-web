@@ -50,8 +50,8 @@ Enter the Customer No : <input type="number" name="cusnum" required autofocus/> 
 						<td><%=p.getPid()%></td>
 						<td><%=p.getProductname()%></td>
 						<td>Rs.<%=p.getPrice()%></td>
-						<td><input type="checkbox" name="pid" value="<%=p.getPid() %>"></td>
-						<td><input type="text" name="q1<%=p.getPid() %>"></td>
+						<td><input type="checkbox" id="pid_<%=p.getPid()%>" name="pid_<%=p.getPid()%>"  value="<%=p.getPid()%>"></td>
+						<td><input type="text" id="qty_<%=p.getPid()%>" name="qty_<%=p.getPid()%>"  onblur="disable(<%=p.getPid()%>, this.value)" ></td>
 
 					</tr>
 					<%
@@ -65,5 +65,26 @@ Enter the Customer No : <input type="number" name="cusnum" required autofocus/> 
 				<a href="Login.jsp">back to login</a>
 </pre>
 	</form>
+	<script>
+	
+function disable(id,qty)
+{
+  console.log(id + "-" + qty);
+	var ch= document.getElementById("pid_"+id);
+//	var qty= document.getElementById("qty_"+id).value;
+	console.log("Quantity " + qty);
+	if (qty && parseInt(qty) > 0){
+		console.log("Valid Qty" + qty);
+	}
+	if(ch.checked)
+		{
+		ch.checked=false;
+	}
+	else
+		{
+		ch.checked=true;
+		}
+}
+	</script>
 </body>
 </html>

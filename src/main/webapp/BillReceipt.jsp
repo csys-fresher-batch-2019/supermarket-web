@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body bgcolor="#85C1E9">
-
+<form action="BillPay.jsp">
 <%
 Order order = (Order) request.getAttribute("ORDER_DETAILS");
 //out.println(order);
@@ -60,5 +60,6 @@ for(OrderItem item: order.getItems()){
 <button type="submit" value="Submit">pay</button>
 <a href="orderitem.jsp"> Next Bill</a>
 <a href="Cancel.jsp"> cancel Bill</a>
+</form>
 </body>
 </html>

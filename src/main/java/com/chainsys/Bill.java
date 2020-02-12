@@ -34,7 +34,7 @@ public class Bill extends HttpServlet {
 			for (String string : arr) {
 
 				int product_id = Integer.parseInt(string);
-				int quantity = Integer.parseInt(request.getParameter("q1" + string));
+				int quantity = Integer.parseInt(request.getParameter("qty_" + string));
 
 				int price = pi.getProductPrice(product_id);
 				int tprice = price * quantity;
