@@ -50,7 +50,7 @@ Enter the Customer No : <input type="number" name="cusnum" required autofocus/> 
 						<td><%=p.getPid()%></td>
 						<td><%=p.getProductname()%></td>
 						<td>Rs.<%=p.getPrice()%></td>
-						<td><input type="checkbox" id="pid_<%=p.getPid()%>" name="pid_<%=p.getPid()%>"  value="<%=p.getPid()%>"></td>
+						<td><input type="checkbox" id="pid_<%=p.getPid()%>" name="pid"  value="<%=p.getPid()%>"></td>
 						<td><input type="text" id="qty_<%=p.getPid()%>" name="qty_<%=p.getPid()%>"  onblur="disable(<%=p.getPid()%>, this.value)" ></td>
 
 					</tr>

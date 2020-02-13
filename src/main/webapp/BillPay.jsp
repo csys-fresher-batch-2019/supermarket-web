@@ -6,13 +6,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>payment</title>
 </head>
-<body>
-<pre>
-Enter the mobile number		<input type="number" name="mobileno" />
-Enter the pin number		<input type="number" name="mobileno" />
-Amount						<input type="number" name="mobileno" />
-				<input type="submit" name="pay" />
-
+<body >
+<pre> <center><h1>PAyMent SuCcEsFuL</h1></center>
+	<a href="orderitem.jsp"> <img src = "assets/images/welcome.jpg" style="width:50%" style="height=50%" ></a>
 </pre>
 </body>
 </html>

@@ -10,28 +10,13 @@
 </head>
 <body bgcolor="#85C1E9">
 <form action="BillPay.jsp">
+<center><h1>* Gk SuperMarket *</h1></center>
+<center><h2>* Bills *</h2></center>
+
 <%
 Order order = (Order) request.getAttribute("ORDER_DETAILS");
 //out.println(order);
 %>
-
-<table>
-<thead>
-<tr><th>Bill NO</th>
-<th>Customer Number</th>
-<th>Total Amount</th>
-<th>orderedDate</th></tr>
-</thead>
-<tbody>
-<tr>
-<td> <%= order.getOrderId() %> </td>
-<td><%=order.getCustomerno() %>  </td>
-<td> <%=order.getTotalAmount() %> </td>
-<td>  <%=order.getOrderedDate() %></td>
-
-</tr>
-</tbody>
-</table>
 
 
 <table>
@@ -57,9 +42,30 @@ for(OrderItem item: order.getItems()){
 <%} %>
 </tbody>
 </table>
-<button type="submit" value="Submit">pay</button>
-<a href="orderitem.jsp"> Next Bill</a>
-<a href="Cancel.jsp"> cancel Bill</a>
+</br>
+</br>
+<table>
+<thead>
+<tr><th>Bill NO</th>
+<th>Customer Number</th>
+<th>Total Amount</th>
+<th>orderedDate</th></tr>
+</thead>
+<tbody>
+<tr>
+<td> <%= order.getOrderId() %> </td>
+<td><%=order.getCustomerno() %>  </td>
+<td> <%=order.getTotalAmount() %> </td>
+<td>  <%=order.getOrderedDate() %></td>
+
+</tr>
+</tbody>
+</table>
+
+<pre>						<button type="submit" value="Submit">pay</button></br>
+							<a href="orderitem.jsp">Next Bill</a></br>
+							<a href="Cancel.jsp">cancel Bill</a></br>
+</pre>
 </form>
 </body>
 </html>
