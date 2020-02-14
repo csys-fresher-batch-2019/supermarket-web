@@ -47,6 +47,42 @@
   	<description></description>
   	<servlet-class>com.chainsys.Cancell</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>CancelBill</servlet-name>
+  	<display-name>CancelBill</display-name>
+  	<description></description>
+  	<servlet-class>com.chainsys.CancelBill</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>EmployeeCount</servlet-name>
+  	<display-name>EmployeeCount</display-name>
+  	<description></description>
+  	<servlet-class>com.chainsys.EmployeeCount</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>BillByDate</servlet-name>
+  	<display-name>BillByDate</display-name>
+  	<description></description>
+  	<servlet-class>com.chainsys.BillByDate</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ViewBills</servlet-name>
+  	<display-name>ViewBills</display-name>
+  	<description></description>
+  	<servlet-class>com.chainsys.ViewBills</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>TotalIncome</servlet-name>
+  	<display-name>TotalIncome</display-name>
+  	<description></description>
+  	<servlet-class>com.chainsys.TotalIncome</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>IncomeByDate</servlet-name>
+  	<display-name>IncomeByDate</display-name>
+  	<description></description>
+  	<servlet-class>com.chainsys.IncomeByDate</servlet-class>
+  </servlet>
  
   <servlet-mapping>
   	<servlet-name>Login</servlet-name>
@@ -77,5 +113,29 @@
   <servlet-mapping>
   	<servlet-name>Cancell</servlet-name>
   	<url-pattern>/Cancell</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>CancelBill</servlet-name>
+  	<url-pattern>/CancelBill</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>EmployeeCount</servlet-name>
+  	<url-pattern>/EmployeeCount</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>BillByDate</servlet-name>
+  	<url-pattern>/BillByDate</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ViewBills</servlet-name>
+  	<url-pattern>/ViewBills</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>TotalIncome</servlet-name>
+  	<url-pattern>/TotalIncome</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>IncomeByDate</servlet-name>
+  	<url-pattern>/IncomeByDate</url-pattern>
   </servlet-mapping>
 </web-app>

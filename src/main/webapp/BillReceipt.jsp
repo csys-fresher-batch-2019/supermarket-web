@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Bill Receipt</title>
 </head>
 <body bgcolor="#85C1E9">
 <form action="BillPay.jsp">
@@ -55,16 +55,16 @@ for(OrderItem item: order.getItems()){
 <tr>
 <td> <%= order.getOrderId() %> </td>
 <td><%=order.getCustomerno() %>  </td>
-<td> <%=order.getTotalAmount() %> </td>
-<td>  <%=order.getOrderedDate() %></td>
+<td> Rs.<%=order.getTotalAmount()%> </td>
+<td>  <%=order.getOrderedDate()%></td>
 
 </tr>
 </tbody>
 </table>
 
 <pre>						<button type="submit" value="Submit">pay</button></br>
-							<a href="orderitem.jsp">Next Bill</a></br>
-							<a href="Cancel.jsp">cancel Bill</a></br>
+							<a href="CancelBill.jsp">Cancel bill</a>
+							<a href="orderitem.jsp">back</a>
 </pre>
 </form>
 </body>

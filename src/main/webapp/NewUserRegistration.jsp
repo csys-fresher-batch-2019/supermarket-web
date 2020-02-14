@@ -22,9 +22,10 @@ Gender					 <input type="radio"name=gender value="M">Male<input type="radio"name
 				<a href="Login.jsp">Back to Login</a>
 							<%
 								String errorMessage = (String)request.getAttribute("Error-message");
-								%>
-							<font color="red">	<%= errorMessage %></font>
-
+								if(errorMessage !=null)
+								{%>
+					<font color="red"><h1>	<%= errorMessage %></h1></font>
+<%} %>
 </pre>
 </form>
 </body>

@@ -24,7 +24,7 @@
 		%>
 		Welcome  <%=username%> ( <a href="LogoutServlet">Logout</a> )<br/> <br/><br/>
 
-Enter the Customer No : <input type="number" name="cusnum" required autofocus/> <br/><br/> <br/><br/>
+Enter the Customer No *: <input type="number" name="cusnum" required autofocus/> <br/><br/> <br/><br/>
 <%		 
 	ProductImple pi = new ProductImple();
  	List<Product> list = pi.displayproduct();
@@ -61,8 +61,8 @@ Enter the Customer No : <input type="number" name="cusnum" required autofocus/> 
 			</table> <br>
 		<pre>
 		<button type="submit">Submit</button>
-				<a href="bill.jsp">goto bills</a>		
-				<a href="Login.jsp">back to login</a>
+		<a href="report.jsp">Back</a>
+				
 </pre>
 	</form>
 	<script>

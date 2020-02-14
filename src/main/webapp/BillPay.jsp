@@ -7,7 +7,7 @@
 <title>payment</title>
 </head>
 <body >
-<pre> <center><h1>PAyMent SuCcEsFuL</h1></center>
+<pre> <center><h1>PAyMENT SuCCESFUL</h1></center>
 	<a href="orderitem.jsp"> <img src = "assets/images/welcome.jpg" style="width:50%" style="height=50%" ></a>
 </pre>
 </body>
