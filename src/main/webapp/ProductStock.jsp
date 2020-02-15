@@ -4,8 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>GK Super Market Details</title>
+<title>Product Stock Details</title>
 </head>
+
 <body bgcolor="#DAF7A6">
 <pre>
 
@@ -21,22 +22,17 @@
 	
 <center>
 <h2>
-<a href ="orderitem.jsp">GoTo Bills</a>
+<a href ="ProductStockView.jsp">View Product Stock</a>
 
-<a href ="ViewBills.jsp">View Bills</a>
+<a href ="AddProduct.jsp">Add Products</a>
 
-<a href="EmployeeCount">Employee Count</a>
+<a href="UpdateProduct.jsp">Update product </a>
 
-<a href="TotalIncome">Total Income</a>
+<a href="DeleteProduct.jsp">Delete Products </a>
 
-<a href ="IncomeByDate.jsp">Income By Date</a>
-
-<a href="Product.jsp">Product Details</a>
-
-<a href="ProductStock.jsp">Stock Details</a>
+<a href="report.jsp">Back </a>
 
 </h2>
 </center>
 
-</body>
-</html>
+</body></html>

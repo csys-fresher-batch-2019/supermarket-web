@@ -83,6 +83,48 @@
   	<description></description>
   	<servlet-class>com.chainsys.IncomeByDate</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>AddProduct</servlet-name>
+  	<display-name>AddProduct</display-name>
+  	<description></description>
+  	<servlet-class>com.chainsys.AddProduct</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UpdateProduct</servlet-name>
+  	<display-name>UpdateProduct</display-name>
+  	<description></description>
+  	<servlet-class>com.chainsys.UpdateProduct</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DeleteProduct</servlet-name>
+  	<display-name>DeleteProduct</display-name>
+  	<description></description>
+  	<servlet-class>com.chainsys.DeleteProduct</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AddProductStock</servlet-name>
+  	<display-name>AddProductStock</display-name>
+  	<description></description>
+  	<servlet-class>com.chainsys.AddProductStock</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UpdateProductStock</servlet-name>
+  	<display-name>UpdateProductStock</display-name>
+  	<description></description>
+  	<servlet-class>com.chainsys.UpdateProductStock</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UpdatePStock</servlet-name>
+  	<display-name>UpdatePStock</display-name>
+  	<description></description>
+  	<servlet-class>com.chainsys.UpdatePStock</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DeletePStock</servlet-name>
+  	<display-name>DeletePStock</display-name>
+  	<description></description>
+  	<servlet-class>com.chainsys.DeletePStock</servlet-class>
+  </servlet>
  
   <servlet-mapping>
   	<servlet-name>Login</servlet-name>
@@ -137,5 +179,30 @@
   <servlet-mapping>
   	<servlet-name>IncomeByDate</servlet-name>
   	<url-pattern>/IncomeByDate</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AddProduct</servlet-name>
+  	<url-pattern>/AddProduct</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UpdateProduct</servlet-name>
+  	<url-pattern>/UpdateProduct</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DeleteProduct</servlet-name>
+  	<url-pattern>/DeleteProduct</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AddProductStock</servlet-name>
+  	<url-pattern>/AddProductStock</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+  	<servlet-name>UpdatePStock</servlet-name>
+  	<url-pattern>/UpdatePStock</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DeletePStock</servlet-name>
+  	<url-pattern>/DeletePStock</url-pattern>
   </servlet-mapping>
 </web-app>
