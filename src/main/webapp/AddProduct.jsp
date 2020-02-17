@@ -26,7 +26,7 @@ Enter the Product name			<input type="text" name="pno" placeholder="Product Name
 Enter the price				<input type="number" name="pri" placeholder="Price" required /><br>
 			
 			<input type="submit" value="Add Product">
-			<a href="report.jsp">Back</a><%
+			<a href="Product.jsp">Back</a><%
 String  order = (String) request.getAttribute("addproduct");
 %><%if(order != null) {%>
 

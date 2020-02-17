@@ -5,7 +5,9 @@
 <head>
 <title>Adding Product Stock</title>
 </head>
-<body><pre>
+<body>
+<form action="AddProductStock">
+<pre>
 	
 						<center>	<font color="red"><h1>GK Super Market</h1></font></center></pre>
 						<%
@@ -15,12 +17,20 @@
 			}
 		%>
 		<center>Welcome  <%=username%> ( <a href="LogoutServlet">Logout</a> )</center><br/> <br/><br/>
-			
-Enter the Product Number	<input type="number" name="pno" placeholder="Product Number" required autofocus/>
-Enter the quantity			<input type="number" name="qut" placeholder="Quantity" required autofocus/>
-Enter the arrival date		<input type="date" name="ad" placeholder="Arrival Date" required autofocus/>
-Enter the Expery date		<input type="date" name="ed" placeholder="Expery Date" required autofocus/>
-				<input type="submit" value="Adding Stock">
+			<pre>
+Enter the Product Number	<input type="number" name="pno" placeholder="Product Number" required autofocus/><br></br>
+Enter the quantity		<input type="number" name="qut" placeholder="Quantity" required autofocus/><br></br>
+Enter the arrival date		<input type="date" name="ad" placeholder="Arrival Date" required autofocus/><br></br>
+Enter the Expery date		<input type="date" name="ed" placeholder="Expery Date" required autofocus/><br></br>
+				<input type="submit" value="Adding Stock"><br></br>
+				<a href="ProductStock.jsp">Back</a>
+				<%String  order = (String) request.getAttribute("AddStock");
+%><%if(order != null) {%>
+
+	<h2><%=order %></h2>
+<%} %>			
+				</pre>
 </pre>
+</form>
 </body>
 </html>

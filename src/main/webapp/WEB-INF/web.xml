@@ -125,6 +125,24 @@
   	<description></description>
   	<servlet-class>com.chainsys.DeletePStock</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>UpdateEmployee</servlet-name>
+  	<display-name>UpdateEmployee</display-name>
+  	<description></description>
+  	<servlet-class>com.chainsys.UpdateEmployee</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DeleteEmployee</servlet-name>
+  	<display-name>DeleteEmployee</display-name>
+  	<description></description>
+  	<servlet-class>com.chainsys.DeleteEmployee</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AddEmployee</servlet-name>
+  	<display-name>AddEmployee</display-name>
+  	<description></description>
+  	<servlet-class>com.chainsys.AddEmployee</servlet-class>
+  </servlet>
  
   <servlet-mapping>
   	<servlet-name>Login</servlet-name>
@@ -204,5 +222,17 @@
   <servlet-mapping>
   	<servlet-name>DeletePStock</servlet-name>
   	<url-pattern>/DeletePStock</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UpdateEmployee</servlet-name>
+  	<url-pattern>/UpdateEmployee</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DeleteEmployee</servlet-name>
+  	<url-pattern>/DeleteEmployee</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AddEmployee</servlet-name>
+  	<url-pattern>/AddEmployee</url-pattern>
   </servlet-mapping>
 </web-app>

@@ -35,6 +35,8 @@
 
 <a href="ProductStock.jsp">Stock Details</a>
 
+<a href="Employee.jsp">Employee Details</a>
+
 </h2>
 </center>
 

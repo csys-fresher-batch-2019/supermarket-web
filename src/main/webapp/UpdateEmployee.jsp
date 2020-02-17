@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Deleting Product</title>
+<title>Update Employee Details</title>
 </head>
 <body>
 
-<form action="DeleteProduct">
+<form action="UpdateEmployee">
 <center>
 <pre>
 									
@@ -22,12 +22,14 @@
 		<center>Welcome  <%=username%> ( <a href="LogoutServlet">Logout</a> )</center><br/> <br/><br/>
 <pre>		
 
-Enter the Product Name			<input type="text" name="pid" placeholder="Product name" required /><br>
+Enter the Employee Name			<input type="text" name="en" placeholder="Employee name" required /><br>
+
+Enter the Employee Address		<input type="text" name="ea" placeholder="Employee Address" required /><br>
 			
-			<input type="submit" value="Delete Product">
-			<a href="Product.jsp">Back</a>
+			<input type="submit" value="Update Employee">
+			<a href="Employee.jsp">Back</a>
 			<%
-String  order = (String) request.getAttribute("order");
+String  order = (String) request.getAttribute("updateproduct");
 %><%if(order != null) {%>
 
 	<h2><%=order %></h2>
@@ -36,5 +38,7 @@ String  order = (String) request.getAttribute("order");
 </pre>
 </center>
 </form>
+
+
 </body>
 </html>

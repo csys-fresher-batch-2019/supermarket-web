@@ -27,7 +27,7 @@ Enter the product Name		<input type=text name="pid" placeholder="ProductName " r
 Enter the price			<input type="number" name="pri" placeholder="Price" required /><br>
 			
 			<input type="submit" value="Update Product">
-			<a href="report.jsp">Back</a>		
+			<a href="Product.jsp">Back</a>		
 			<%
 			String product=(String)request.getAttribute("product");
 			%><%if(product != null) {%>

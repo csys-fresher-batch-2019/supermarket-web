@@ -58,7 +58,7 @@
 			</table> <br>
 		<pre>
 
-		<a href="report.jsp">Back</a>
+		<a href="Product.jsp">Back</a>
 				
 </pre>
 

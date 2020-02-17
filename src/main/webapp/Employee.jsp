@@ -4,9 +4,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Product Stock Details</title>
+<title>Employee Details</title>
 </head>
-
 <body bgcolor="#DAF7A6">
 <pre>
 
@@ -22,17 +21,18 @@
 	
 <center>
 <h2>
-<a href ="ProductStockView.jsp">View Product Stock</a>
+<a href ="EmployeeView.jsp">View Employee Details</a>
 
-<a href ="AddProductStock.jsp">Add Products</a>
+<a href ="AddEmployee.jsp">Add Employee</a>
 
-<a href="UpdateProductStock.jsp">Update product </a>
+<a href="UpdateEmployee.jsp">Update Employee </a>
 
-<a href="DeleteProductStock.jsp">Delete Products </a>
+<a href="DeleteEmployee.jsp">Delete Employee </a>
 
 <a href="report.jsp">Back </a>
 
 </h2>
 </center>
 
-</body></html>
+</body>
+</html>

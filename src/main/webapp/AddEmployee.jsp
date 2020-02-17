@@ -4,14 +4,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Deleting Product</title>
+<title>Add Employee Details</title>
 </head>
 <body>
-
-<form action="DeleteProduct">
-<center>
+<form action="AddEmployee">
 <pre>
-									
+	
 						<center>	<font color="red"><h1>GK Super Market</h1></font></center></pre>
 						<%
 			String username = (String) session.getAttribute("LOGGED_IN_USER_ID");
@@ -20,21 +18,20 @@
 			}
 		%>
 		<center>Welcome  <%=username%> ( <a href="LogoutServlet">Logout</a> )</center><br/> <br/><br/>
-<pre>		
-
-Enter the Product Name			<input type="text" name="pid" placeholder="Product name" required /><br>
-			
-			<input type="submit" value="Delete Product">
-			<a href="Product.jsp">Back</a>
-			<%
-String  order = (String) request.getAttribute("order");
+	<pre>		
+Enter the Employee Number	<input type=""text"" name="eno" placeholder="Employee Number" required autofocus/><br></br>
+Enter the Date-Of-Birth		<input type="date" name="dob" placeholder="Date-of-birth" required autofocus/><br></br>
+Enter the Date-Of-Joining	<input type="date" name="doj" placeholder="Date-of-joining" required autofocus/><br></br>
+Enter the Address           <input type="text" name="add" placeholder="Address" required autofocus/><br></br>
+				<input type="submit" value="Adding Stock"><br>
+				<a href="Employee.jsp">Back</a>
+				<%String  order = (String) request.getAttribute("AddEmployee");
 %><%if(order != null) {%>
 
 	<h2><%=order %></h2>
 <%} %>			
+		</pre>		
 </pre>
-</pre>
-</center>
 </form>
 </body>
 </html>
