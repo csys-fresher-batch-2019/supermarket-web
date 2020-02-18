@@ -25,11 +25,10 @@ public class Bill extends HttpServlet {
 			throws ServletException, IOException {
 
 		String cus = request.getParameter("cusnum");
-		int cusno = Integer.valueOf(cus);
-		//session
 		HttpSession sess=request.getSession();
 		sess.setAttribute("cusno", cus);
-	
+		int cusno = Integer.valueOf(cus);
+		
 		String[] arr = request.getParameterValues("pid");
 		int totalAmount = 0;
 		ProductImple pi = new ProductImple();

@@ -1,20 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<%@  page import="com.chainsys.supermarketapp.dao.impl.BillOrderImple"%>
-<%@  page import="com.chainsys.supermarketapp.model.Order"%>
+    pageEncoding="ISO-8859-1"%>
+    <%@  page import="com.chainsys.supermarketapp.dao.impl.BillOrderImple"%>
+<%@  page import="com.chainsys.supermarketapp.model.OrderItem"%>
 <%@  page import=" java.util.*"%>
 <%@  page import="javax.servlet.*" %>
+    
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>View Bills</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>View Bill Item</title>
 </head>
-<body >
+<body>
 
 
 <%
+int cus=Integer.parseInt(request.getParameter("customer_no"));
 BillOrderImple boi = new BillOrderImple();
-List<Order> list = boi.displayBillOrder();
+List<OrderItem> list = boi.ViewBillItems(cus);
  	
 %>
  <pre>							
@@ -44,17 +47,16 @@ List<Order> list = boi.displayBillOrder();
 
 		
 		<%
-		for (Order pr : list) {
+		for (OrderItem pr : list) {
 		%>
 		<tr>
 		
 	
-		
-		<td><a href= "ViewBillItem.jsp?customer_no=<%=pr.getOrderId() %>"><%=pr.getOrderId() %></a></td>
-		<td><%=pr.getCustomerno() %></td>
+		<td><%=	pr.getId() %></td>
+		<td><%=	pr.getOrderId() %></td>
+		<td><%=pr.getProductId() %></td>
+		<td><%=pr.getQuantity() %></td>
 		<td>Rs.<%=pr.getTotalAmount() %></td>
-		<td><%=pr.getStatus() %></td>
-		<td><%=pr.getOrderedDate() %></td>
 		</tr>
 	</tbody>
 	
@@ -62,9 +64,8 @@ List<Order> list = boi.displayBillOrder();
 	}
 		%>
 	</table> 
-	
-<pre><center><a href="report.jsp">Back</a></center></pre>
+	<pre><center><a href="ViewBills.jsp">Back</a></center></pre>
 
-				
+
 </body>
 </html>
