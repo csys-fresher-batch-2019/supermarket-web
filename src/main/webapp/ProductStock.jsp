@@ -24,11 +24,11 @@
 <h2>
 <a href ="ProductStockView.jsp">View Product Stock</a>
 
-<a href ="AddProductStock.jsp">Add Products</a>
+<a href ="AddProductStock.jsp">Add Products Stock</a>
 
-<a href="UpdateProductStock.jsp">Update product </a>
+<a href="UpdateProductStock.jsp">Update product Stock</a>
 
-<a href="DeleteProductStock.jsp">Delete Products </a>
+
 
 <a href="report.jsp">Back </a>
 

@@ -7,32 +7,34 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-import com.chainsys.supermarketapp.dao.impl.ProductImple;
+import com.chainsys.supermarketapp.dao.impl.BillOrderImple;
 import com.chainsys.supermarketapp.exception.DbException;
-import com.chainsys.supermarketapp.model.Product;
 
-public class DeleteProduct extends HttpServlet {
+public class BillPayment extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+       
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
-		ProductImple pi=new ProductImple();
-		Product p=new Product();
 		
-		int d=Integer.parseInt(request.getParameter("pid"));
-		p.setPid(d);
-				try {
-			pi.deleteproductAll(p);
-			request.setAttribute("order", "Deleted Succesfully");
+		BillOrderImple boi=new BillOrderImple();
+		
+		HttpSession sess=request.getSession(false);
+		String cusno=(String)sess.getAttribute("cusno");
+		int cus = Integer.valueOf(cusno);
+		
+		
+		try {
+			boi.updateBillStatus(cus);
+			String order="PAyment Succesful";
+			request.setAttribute("ORDER_DETAILS", order);
 
-			RequestDispatcher dispatcher = request.getRequestDispatcher("DeleteProduct.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("BillPay.jsp");
 			dispatcher.forward(request, response);
-
 		} catch (DbException e) {
+		
 			e.printStackTrace();
 		}
-		
 	}
 
 	

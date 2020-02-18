@@ -143,6 +143,18 @@
   	<description></description>
   	<servlet-class>com.chainsys.AddEmployee</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>BillReceipt</servlet-name>
+  	<display-name>BillReceipt</display-name>
+  	<description></description>
+  	<servlet-class>com.chainsys.BillReceipt</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>BillPayment</servlet-name>
+  	<display-name>BillPayment</display-name>
+  	<description></description>
+  	<servlet-class>com.chainsys.BillPayment</servlet-class>
+  </servlet>
  
   <servlet-mapping>
   	<servlet-name>Login</servlet-name>
@@ -234,5 +246,13 @@
   <servlet-mapping>
   	<servlet-name>AddEmployee</servlet-name>
   	<url-pattern>/AddEmployee</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>BillReceipt</servlet-name>
+  	<url-pattern>/BillReceipt</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>BillPayment</servlet-name>
+  	<url-pattern>/BillPayment</url-pattern>
   </servlet-mapping>
 </web-app>

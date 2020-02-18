@@ -10,6 +10,12 @@
 	<url>http://maven.apache.org</url>
 
 
+
+		<properties>
+		<failOnMissingWebXml>false</failOnMissingWebXml>
+	</properties>
+
+
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -18,8 +24,7 @@
 			<scope>test</scope>
 		</dependency>
 		
-		
-		
+				
 		
 		
 	<dependency>

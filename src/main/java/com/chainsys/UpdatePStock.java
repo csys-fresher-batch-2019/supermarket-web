@@ -14,30 +14,34 @@ import com.chainsys.supermarketapp.model.ProductStock;
 
 public class UpdatePStock extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
 
-
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int prno=Integer.parseInt(request.getParameter("pno"));
-		int qty=Integer.parseInt(request.getParameter("qut"));
-		ProductStockImple psi=new ProductStockImple();
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		int prno = Integer.parseInt(request.getParameter("pno"));
+		int qty = Integer.parseInt(request.getParameter("qut"));
+		ProductStockImple psi = new ProductStockImple();
 		ProductStock ps = new ProductStock();
 		ps.setProductno(prno);
 		ps.setQuantity(qty);
+		boolean product;
 		try {
-			psi.updateProductStock(ps);
-			request.setAttribute("updateproduct", "Update Product Stock Suucesfully");
+			product = psi.isProductExists(ps.getProductno());
+			if (product){
+				psi.updateProductStock(ps);
 
+				request.setAttribute("updateproduct", "Update Product Stock Suucesfully");
+				RequestDispatcher dispatcher = request.getRequestDispatcher("UpdateProductStock.jsp");
+				dispatcher.forward(request, response);
+			} else{
+				psi.updateProductStock(ps);
+			
+			request.setAttribute("updateproduct", "Update Product Stock Suucesfully");
 			RequestDispatcher dispatcher = request.getRequestDispatcher("UpdateProductStock.jsp");
 			dispatcher.forward(request, response);
-
+			}
 		} catch (DbException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
-
 	}
-
-
 }

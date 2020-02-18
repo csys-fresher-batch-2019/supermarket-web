@@ -8,6 +8,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import com.chainsys.supermarketapp.dao.impl.BillOrderImple;
 import com.chainsys.supermarketapp.dao.impl.ProductImple;
 import com.chainsys.supermarketapp.exception.DbException;
@@ -24,13 +26,17 @@ public class Bill extends HttpServlet {
 
 		String cus = request.getParameter("cusnum");
 		int cusno = Integer.valueOf(cus);
+		//session
+		HttpSession sess=request.getSession();
+		sess.setAttribute("cusno", cus);
+	
 		String[] arr = request.getParameterValues("pid");
-
 		int totalAmount = 0;
 		ProductImple pi = new ProductImple();
 		Order order = new Order();
 		order.setCustomerno(cusno);
-		try {
+		
+			try {
 			for (String string : arr) {
 
 				int product_id = Integer.parseInt(string);
@@ -47,8 +53,6 @@ public class Bill extends HttpServlet {
 				
 				//add amount to total
 				totalAmount = totalAmount + tprice;
-				
-
 			}
 			
 			order.setTotalAmount(totalAmount);
@@ -61,14 +65,14 @@ public class Bill extends HttpServlet {
 			
 			request.setAttribute("ORDER_DETAILS", order);
 
-			RequestDispatcher dispatcher = request.getRequestDispatcher("BillReceipt.jsp");
-			dispatcher.forward(request, response);
+			RequestDispatcher dispatcher1 = request.getRequestDispatcher("BillReceipt.jsp");
+			dispatcher1.forward(request, response);
 			
 		} catch (DbException e) {
 			e.printStackTrace();
 			log.error(e);
-			RequestDispatcher dispatcher = request.getRequestDispatcher("orderitem.jsp");
-			dispatcher.forward(request, response);
+			RequestDispatcher dispatcher2 = request.getRequestDispatcher("orderitem.jsp");
+			dispatcher2.forward(request, response);
 		}
 		
 

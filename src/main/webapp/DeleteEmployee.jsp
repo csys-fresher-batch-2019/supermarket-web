@@ -26,7 +26,7 @@
 
 Enter the Employee Name			<input type="text" name="en" placeholder="Employee name" required /><br>
 
-			<input type="submit" value="Update Employee">
+			<input type="submit" value="Delete Employee">
 			<a href="Employee.jsp">Back</a>
 			<%
 String  order = (String) request.getAttribute("updateproduct");

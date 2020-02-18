@@ -22,7 +22,7 @@
 		<center>Welcome  <%=username%> ( <a href="LogoutServlet">Logout</a> )</center><br/> <br/><br/>
 <pre>		
 
-Enter the Product Name			<input type="text" name="pid" placeholder="Product name" required /><br>
+Enter the Product ID			<input type="number" name="pid" placeholder="Product ID" required /><br>
 			
 			<input type="submit" value="Delete Product">
 			<a href="Product.jsp">Back</a>

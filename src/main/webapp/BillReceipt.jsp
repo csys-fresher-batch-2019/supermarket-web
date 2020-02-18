@@ -9,7 +9,7 @@
 <title>Bill Receipt</title>
 </head>
 <body bgcolor="#85C1E9">
-<form action="BillPay.jsp">
+<form action="BillPayment">
 <center><h1>* Gk SuperMarket *</h1></center>
 <center><h2>* Bills *</h2></center>
 

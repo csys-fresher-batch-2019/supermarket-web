@@ -8,6 +8,11 @@
 </head>
 <body >
 <pre> <center><h1>PAyMENT SuCCESFUL</h1></center>
+<%
+String order = (String) request.getAttribute("ORDER_DETAILS");
+//out.println(order);
+%>
+<%=order %>
 	<a href="orderitem.jsp"> <img src = "assets/images/welcome.jpg" style="width:50%" style="height=50%" ></a>
 </pre>
 </body>

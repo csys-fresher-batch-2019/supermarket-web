@@ -27,7 +27,7 @@
 
 <%		 
 	ProductImple pi = new ProductImple();
- 	List<Product> list = pi.displayproduct();
+ 	List<Product> list = pi.displayproductAvailable();
  	 %>
  			<table >
 				<thead>

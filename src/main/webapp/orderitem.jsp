@@ -27,7 +27,7 @@
 Enter the Customer No *: <input type="number" name="cusnum" required autofocus/> <br/><br/> <br/><br/>
 <%		 
 	ProductImple pi = new ProductImple();
- 	List<Product> list = pi.displayproduct();
+ 	List<Product> list = pi.displayproductAvailable();
  	 %>
  			<table >
 				<thead>

@@ -1,9 +1,6 @@
 package com.chainsys;
 
 import java.io.IOException;
-import java.sql.Date;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 
 import javax.servlet.RequestDispatcher;
@@ -34,18 +31,38 @@ public class AddProductStock extends HttpServlet {
 			ps.setQuantity(qty);
 			ps.setProductarrival(a);
 			ps.setExperydate(ex);
-			try {
-				psi.addProductStock(ps);
+			boolean product = ps.getExperydate().isAfter(ps.getProductarrival());
+			System.out.println(product);
+			
+			if(product)
+			{
+			
+		
+				try {
+					psi.addProductStock(ps);
+					
+					request.setAttribute("AddStock", "Adding Stock Details Suucesfully");
+
+					RequestDispatcher dispatcher = request.getRequestDispatcher("AddProductStock.jsp");
+					dispatcher.forward(request, response);
+
+				} catch (DbException e) {
+					e.printStackTrace();
+				}
 				
 				request.setAttribute("AddStock", "Adding Stock Details Suucesfully");
 
 				RequestDispatcher dispatcher = request.getRequestDispatcher("AddProductStock.jsp");
 				dispatcher.forward(request, response);
-
-			} catch (DbException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
 			}
-    	}
+			else
+			{
+				request.setAttribute("AddStock", "INVALID EXPERY DATE");
+
+				RequestDispatcher dispatcher = request.getRequestDispatcher("AddProductStock.jsp");
+				dispatcher.forward(request, response);
+			}
+
+		}
 
 }
