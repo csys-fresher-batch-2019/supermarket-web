@@ -17,7 +17,7 @@
 <%
 int cus=Integer.parseInt(request.getParameter("customer_no"));
 BillOrderImple boi = new BillOrderImple();
-List<OrderItem> list = boi.ViewBillItems(cus);
+List<OrderItem> list = boi.viewBillItems(cus);
  	
 %>
  <pre>							
@@ -35,7 +35,7 @@ List<OrderItem> list = boi.ViewBillItems(cus);
 		
 <table >
 		<tr>
-			<th>Bill No</th>
+			
 			<th>Customer Number</th>
 			<th>Price</th>
 			<th>Status</th>
@@ -51,8 +51,6 @@ List<OrderItem> list = boi.ViewBillItems(cus);
 		%>
 		<tr>
 		
-	
-		<td><%=	pr.getId() %></td>
 		<td><%=	pr.getOrderId() %></td>
 		<td><%=pr.getProductId() %></td>
 		<td><%=pr.getQuantity() %></td>
